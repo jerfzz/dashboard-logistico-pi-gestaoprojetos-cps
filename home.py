@@ -59,25 +59,25 @@ page_home = st.Page(
 )
 
 page_governanca = st.Page(
-    "views/governanca.py", 
+    "view/governanca.py", 
     title="Governança e Gestão (PMBOK)", 
     icon="📊"
 )
 
 page_analytics = st.Page(
-    "views/analytics.py", 
+    "view/analytics.py", 
     title="Motor de Analytics Logístico (BI)", 
     icon="🚚"
 )
 
 page_manual = st.Page(
-    "views/manual.py",
+    "view/manual.py",
     title="Manual do Usuário",
     icon="📘"
 )
 
 page_projeto_integrador = st.Page(
-    "views/projeto_integrador.py",
+    "view/projeto_integrador.py",
     title="Projeto Integrador",
     icon="🎓"
 )

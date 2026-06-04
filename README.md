@@ -95,7 +95,7 @@ http://localhost:8501
 
 ###  Projeto publicado através do Streamlit. Acesse-o pelo link
 
-* 🔗 [Streamlit](https://dashboard-logistico-pi-gestaoprojetos-cps.stramlit.app/)
+* 🔗 [Streamlit](https://dashboard-logistico-pi-gestaoprojetos-cps.streamlit.app/)
 
 ---
 

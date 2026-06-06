@@ -8,12 +8,12 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# 2. Inicialização do Estado Global de Tema (Se o seu código usar)
+# 2. INICIALIZAÇÃO DO ESTADO GLOBAL DO TEMA
 if 'tema_escuro' not in st.session_state:
     st.session_state.tema_escuro = False
 
 
-# 3. FUNÇÃO QUE RENDERIZA A SUA CAPA PERSONALIZADA
+# 3. FUNÇÃO QUE RENDERIZA A CAPA PERSONALIZADA
 def renderizar_capa():
     st.title("🏢 Plataforma Integrada de Governança e Analytics")
     st.subheader("Bem-vindo ao Ecossistema Corporativo da Jerf S/A")
@@ -50,7 +50,7 @@ def renderizar_capa():
     st.success("Utilize a barra de navegação à esquerda para alternar entre os módulos de Gestão e BI!")
 
 
-# 4. DECLARAÇÃO DAS PÁGINAS (Usando a pasta alternativa 'views')
+# 4. DECLARAÇÃO DAS PÁGINAS
 page_home = st.Page(
     renderizar_capa, # <-- Passamos a função da capa aqui!
     title="Início",

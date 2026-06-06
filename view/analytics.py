@@ -42,7 +42,7 @@ def aplicar_estilos():
 # 4. APLICAÇÃO DO TEMA
 tema_plotly, texto_botao = aplicar_estilos()
 
-# 5. SIDEBAR LIMPA (Igual ao exemplo que você mandou)
+# 5. SIDEBAR LIMPA 
 with st.sidebar:
     st.title("🚚 Jerf S/A")
     st.button(texto_botao, on_click=alternar_tema)
@@ -50,7 +50,7 @@ with st.sidebar:
     # Adicione seus filtros aqui embaixo
     st.write("### Filtros")
 
-# --- 1. PROCESSO DE ETL (Merge e Limpeza) ---
+# 6 PROCESSO DE ETL (Merge e Limpeza)
 @st.cache_data
 def carregar_dados_consolidados():
     # Carregando os CSVs individuais
@@ -110,14 +110,14 @@ def carregar_dados_consolidados():
 # Executando o carregamento
 df_master = carregar_dados_consolidados()
 
-# --- 2. GESTÃO DE NAVEGAÇÃO ---
+# 7 GESTÃO DE NAVEGAÇÃO
 if 'pagina' not in st.session_state:
     st.session_state.pagina = "Home"
 
 def ir_para(nome):
     st.session_state.pagina = nome
 
-# --- 3. BARRA LATERAL (MENU E FILTROS) ---
+# 8 BARRA LATERAL (MENU E FILTROS)
 with st.sidebar:
     st.markdown("<h1 style='text-align: center; color: #FF2C2C;'>JERF S/A</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center;'>Business Intelligence</p>", unsafe_allow_html=True)
@@ -150,7 +150,7 @@ df_filtrado = df_master[
     (df_master['customer_state'].isin(uf_sel))
 ]
 
-# --- 4. CONTEÚDO DAS PÁGINAS ---
+# 9 CONTEÚDO DAS PÁGINAS
 
 if st.session_state.pagina == "Home":
     st.title("🚚 Dashboard de Performance Logística (OTIF & Lead Time Analytics)")
